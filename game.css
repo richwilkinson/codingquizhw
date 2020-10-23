@@ -15,8 +15,8 @@ body {
 }
 
 .choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    cursor: grab;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(253, 33, 4, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
@@ -57,7 +57,7 @@ body {
 #progressBar {
     width: 20rem;
     height: 3rem;
-    border: 0.2rem solid rgb(11,223,36);
+    border: 0.2rem solid rgb(45, 65, 245);
     margin-top: 2rem;
     border-radius: 50px;
     overflow: hidden;
@@ -65,7 +65,7 @@ body {
 
 #progressBarFull {
     height: 100%;
-    background: rgb(11,223,36);
+    background: rgb(11, 32, 223);
     width: 0%;
 }
 
