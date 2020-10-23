@@ -1,5 +1,7 @@
 body {
     color: #fff;
+    background-image: url("gamebg.jpg");
+    background-size: cover;
 }
 
 .choice-container {
