@@ -1,5 +1,5 @@
 body {
-    color: white;
+    color: #fff;
 }
 
 .choice-container {
@@ -7,16 +7,16 @@ body {
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
-    background: transparent;
+    background: rgb(18, 93, 255);
     font-size: 3rem;
     min-width: 80rem;
 }
 
 .choice-container:hover {
-    cursor: progress;
-    box-shadow: 0 0.4rem 1.4rem 0 lightskyblue;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
     transform: scale(1.02);
-    transition: transform 100ms;
+    transform: transform 100ms;
 }
 
 .choice-prefix {
@@ -30,22 +30,22 @@ body {
 }
 
 .correct {
-    background: linear-gradient(32deg, lightgreen 0%, lightgreen 100%);
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
 }
 
 .incorrect {
-    background: linear-gradient(32deg, red 0%, red 100%);
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
 }
 
+/* Heads up Display */
 #hud {
     display: flex;
     justify-content: space-between;
-    margin-top: 10rem;
 }
 
 .hud-prefix {
-    font-size: 2rem;
     text-align: center;
+    font-size: 2rem;
 }
 
 .hud-main-text {
@@ -55,15 +55,15 @@ body {
 #progressBar {
     width: 20rem;
     height: 3rem;
-    border: 0.2rem solid greenyellow;
-    border-radius: 50px;
+    border: 0.2rem solid rgb(11,223,36);
     margin-top: 2rem;
+    border-radius: 50px;
     overflow: hidden;
 }
 
 #progressBarFull {
     height: 100%;
-    background: greenyellow;
+    background: rgb(11,223,36);
     width: 0%;
 }
 
