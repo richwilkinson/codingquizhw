@@ -31,6 +31,11 @@ body {
     width: 100%;
 }
 
+#timerSelect {
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .correct {
     background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
 }
@@ -69,7 +74,7 @@ body {
     width: 0%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
     .choice-container {
         min-width: 40rem;
     }

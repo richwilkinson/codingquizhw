@@ -1,5 +1,7 @@
 body {
     color: #fff;
+    background-image: url(highbg.jpeg);
+    background-size: cover;
 }
 
 #highScoresList {

@@ -7,11 +7,8 @@
 .background {
     background-image: url("homebg.jpg");
     background-size: cover;
+    background-position: center;
     
-}
-
-.bgend {
-
 }
 
 * {
@@ -154,6 +151,12 @@ input::placeholder {
     margin-left: 1rem;
     font-size: 2rem;
     color: rgb(28, 26, 26)
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
 }
 
 
