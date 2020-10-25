@@ -119,6 +119,12 @@ h2 {
     max-width: 30rem;
 }
 
+.bgend {
+    background-image: url("endbg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 input {
     margin-bottom: 1rem;
     width: 20rem;

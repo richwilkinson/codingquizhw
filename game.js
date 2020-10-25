@@ -12,7 +12,7 @@ let questionCounter = 0
 let availableQuestions = []
 //timer and penalty value
 let timer = 75
-const penalty = -10
+const penalty = timer - 10
 
 //variable selecting id for timer display
 const timerSelect = document.querySelector('#timerSelect')
@@ -146,7 +146,7 @@ choices.forEach(choice => {
 
 //function for penalty
 penTime = num => {
-    timer -=num
+    timer =num
     timerSelect.innerText = timer
 }
 
