@@ -1,24 +1,28 @@
+//Set variables to display in html
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
-
+//Question, Answer, Score values
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
-
+//timer and penalty value
 let timer = 75
+const penalty = -10
 
+//variable selecting id for timer display
 const timerSelect = document.querySelector('#timerSelect')
 
+//sentinterval variable
 let setInt 
 
 console.log(timerSelect)
 
-
+//variables for questions & answers
 let questions = [
     {
         question: 'What does HTML stand for ?',
@@ -54,16 +58,17 @@ let questions = [
         answer: 3,
     }
 ]
-
+//value for each question and question amount
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
+//function to start timer
 startTime = () => {
     timerSelect.innerText = `Time :${timer}`;
     setInt = setInterval (decreaseTime, 1000);
 }
 
-
+//function to start game
 startGame = () => {
     questionCounter = 0
     score = 0
@@ -72,17 +77,19 @@ startGame = () => {
     startTime()
 }
 
-
+//function that decreases time and stops it at 0 and displays message and returns to end
 decreaseTime = () => {
     timer--
     timerSelect.innerText = `Time :${timer}`;
     if(timer <= -1) {
         clearTimeout(setInt)
         alert("Time's up" + " " + "Your Score is :" + " " +  score)
+        localStorage.setItem('mostRecentScore', score)
         return window.location.assign('end.html')
     }
 }
 
+//function to genrate a new question and track score
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -108,6 +115,7 @@ getNewQuestion = () => {
     acceptingAnswers = true
 }
 
+//tracks choices
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
@@ -120,8 +128,12 @@ choices.forEach(choice => {
         
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
-        }
+        } 
         
+        if(classToApply === 'incorrect') {
+            penTime(penalty)
+        }
+
         selectedChoice.parentElement.classList.add(classToApply)
         
         setTimeout(() => {
@@ -132,6 +144,13 @@ choices.forEach(choice => {
     })
 })
 
+//function for penalty
+penTime = num => {
+    timer -=num
+    timerSelect.innerText = timer
+}
+
+//function for score tracking
 incrementScore = num => {
     score +=num
     scoreText.innerText = score

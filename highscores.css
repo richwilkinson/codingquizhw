@@ -1,9 +1,11 @@
+/*styles background and tex color*/
 body {
     color: #fff;
     background-image: url(highbg.jpeg);
     background-size: cover;
+    background-position: center;
 }
-
+/*styles highscore display*/
 #highScoresList {
     list-style: none;
     margin-bottom: 4rem;

@@ -1,9 +1,11 @@
+
+/*styles background*/
 body {
     color: #fff;
     background-image: url("gamebg.jpg");
     background-size: cover;
 }
-
+/*styles answer boxes*/
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -13,14 +15,14 @@ body {
     font-size: 3rem;
     min-width: 80rem;
 }
-
+/*adds effects on hover over answer box*/
 .choice-container:hover {
     cursor: grab;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(253, 33, 4, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
-
+/*styling for text in answer box*/
 .choice-prefix {
     padding: 2rem 2.5rem;
     color: white;
@@ -30,14 +32,14 @@ body {
     padding: 2rem;
     width: 100%;
 }
-
+/*styling for timer display*/
 #timerSelect {
     font-size: 15px;
     font-weight: bold;
 }
-
+/*styling for correct or incorrect event*/
 .correct {
-    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+    background: greenyellow;
 }
 
 .incorrect {
