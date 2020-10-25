@@ -18,7 +18,7 @@ body {
 /*adds effects on hover over answer box*/
 .choice-container:hover {
     cursor: grab;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(253, 33, 4, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0.5);
     transform: scale(1.02);
     transform: transform 100ms;
 }
