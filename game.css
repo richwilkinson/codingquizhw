@@ -1,9 +1,7 @@
 
-/*styles background*/
+/*colors font*/
 body {
     color: #fff;
-    background-image: url("gamebg.jpg");
-    background-size: cover;
 }
 /*styles answer boxes*/
 .choice-container {
