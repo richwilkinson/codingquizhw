@@ -59,7 +59,7 @@ let questions = [
     }
 ]
 //value for each question and question amount
-const SCORE_POINTS = 100
+const SCORE_POINTS = 25
 const MAX_QUESTIONS = 4
 
 //function to start timer
